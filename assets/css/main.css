@@ -1,9 +1,7 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
+html, body, div, span, h1, h2, h3, p, a,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
 u, i, center, dl, dt, dd, ol, ul, li, fieldset,
@@ -29,20 +27,6 @@ body {
 
 ol, ul {
 	list-style: none;
-}
-
-blockquote, q {
-	quotes: none;
-}
-
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
 
 body {
@@ -79,17 +63,6 @@ input, select, textarea {
 	body {
 		background: #f0f0f0;
 	}
-
-		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-			-moz-animation: none !important;
-			-webkit-animation: none !important;
-			-ms-animation: none !important;
-			animation: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-			-ms-transition: none !important;
-			transition: none !important;
-		}
 
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro';
@@ -1713,46 +1686,6 @@ input, select, textarea {
 		border: 0;
 	}
 
-/* Table */
-
-	table {
-		width: 100%;
-	}
-
-		table tbody tr {
-			border-top: solid 1px #E5E5E5;
-		}
-
-			table tbody tr:first-child {
-				border-top: 0;
-			}
-
-		table td {
-			padding: 0.75em 1em 0.75em 1em;
-		}
-
-		table th {
-			text-align: left;
-			font-weight: bold;
-			padding: 0.75em 1em 0.75em 1em;
-		}
-
-		table thead {
-			background: #878787;
-			color: #fff;
-			font-weight: 400;
-			text-transform: uppercase;
-			border: 0;
-			box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
-			font-size: 0.85em;
-			letter-spacing: 2px;
-		}
-
-		table tfoot {
-			background: #F0F0F0;
-			border-top: solid 2px #E5E5E5;
-		}
-
 /* Button */
 
 	input[type="button"],
@@ -1833,27 +1766,6 @@ input, select, textarea {
 				background: #878787;
 			}
 
-/* Box */
-
-	.no-sidebar .box.post > header {
-		text-align: center;
-	}
-
-	.box.excerpt .date {
-		background: #878787;
-		color: #fff;
-		font-weight: 400;
-		text-transform: uppercase;
-		border-radius: 4px;
-		border: 0;
-		box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
-		display: inline-block;
-		font-size: 0.85em;
-		letter-spacing: 2px;
-		padding: 0.25em 1em 0.25em 1em;
-		margin: 0 0 2.5em 0;
-	}
-
 /* Icons */
 
 	.icon {
@@ -1902,7 +1814,6 @@ input, select, textarea {
 	#header {
 		position: relative;
 		position: relative;
-		background: #fff;
 		text-align: center;
 	}
 
@@ -1910,13 +1821,16 @@ input, select, textarea {
 			padding: 14em 0 7em 0;
 			border-bottom: solid 2px #e5e5e5;
 			box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
-			background-image: url("https://assets.bonappetit.com/photos/5c62e4a3e81bbf522a9579ce/16:9/w_1280,c_limit/milk-bread.jpg");
+			background-image: url("https://www.seriouseats.com/2018/12/20181220-wheat-bread-loaf-vicky-wasik-38.jpg");
+			background-size: cover;
+			width: 100vw;
+			height: 300%;
 		}
 
 		#header h1 {
 			font-family: 'Arvo';
-			font-weight: 700;
-			color: #ed786a;
+			font-weight: 900;
+			color: white;
 			text-shadow: 0.05em 0.075em 0 rgba(0, 0, 0, 0.1);
 			font-size: 3em;
 			letter-spacing: 13px;
@@ -1928,12 +1842,13 @@ input, select, textarea {
 
 		#header p {
 			text-transform: uppercase;
-			font-weight: 400;
-			color: #888;
-			margin: 2.5em 0 0 0;
+			font-weight: 900;
+			color: black;
+			margin: 2.5em 0 0 5%;
 			font-size: 0.85em;
 			letter-spacing: 3px;
-			text-align: center;
+			text-align: right;
+			padding-right: 20px;
 		}
 
 /* Nav */
@@ -1948,7 +1863,8 @@ input, select, textarea {
 
 		#nav > ul > li {
 			display: inline-block;
-			padding-right: 2em;
+
+			padding-right: 2em
 		}
 
 			#nav > ul > li:last-child {
@@ -1959,15 +1875,15 @@ input, select, textarea {
 				border: 0;
 				text-decoration: none;
 				text-transform: uppercase;
-				font-weight: 400;
-				color: #777;
+				font-weight: 800;
+				color: black;
 				outline: 0;
 				display: block;
 			}
 
 				#nav > ul > li > a:before {
 					display: inline-block;
-					background: #878787;
+					background: black;
 					color: #e4e4e4;
 					width: 2.25em;
 					font-size: 0.8em;
@@ -2099,15 +2015,11 @@ input, select, textarea {
 	#banner {
 		position: relative;
 		overflow: hidden;
-		background: #fff;
-		color: #fff;
-		text-align: center;
 		border-top: solid 2px #e5e5e5;
 		border-bottom: solid 2px #e5e5e5;
 		box-shadow: inset 0px -8px 0px 0px #fff, inset 0px 8px 0px 0px #fff;
 		position: relative;
-		text-transform: uppercase;
-		background: url("../../images/banner.jpg");
+		background: url("https://jfk.men/app/uploads/2017/04/Loulou-Foodbar-Amsterdam.jpg");
 		background-size: cover;
 		padding: 10em 0;
 	}
@@ -2228,6 +2140,12 @@ input, select, textarea {
 			text-align: center;
 		}
 
+		#footer p {
+			text-align: center;
+			font-weight: bold;
+			color: black;
+		}
+
 /* Copyright */
 
 	#copyright {
@@ -2277,6 +2195,7 @@ input, select, textarea {
 
 			#header > .container {
 				padding: 12em 0 5em 0;
+				width: 100%;
 			}
 
 			#header h1 {
@@ -2610,7 +2529,8 @@ input, select, textarea {
 		/* Header */
 
 			#header > .container {
-				padding: 6em 0 4em 0;
+				width: 100vw;
+				height: 300%;
 			}
 
 			#header h1 {
